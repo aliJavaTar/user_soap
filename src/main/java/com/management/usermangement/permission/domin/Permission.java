@@ -10,7 +10,7 @@ import lombok.Setter;
 @Setter
 public class Permission {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO, generator = "increment")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     @Column(name = "ID")
     private Long id;

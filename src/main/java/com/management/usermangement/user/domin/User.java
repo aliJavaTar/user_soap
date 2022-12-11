@@ -8,10 +8,10 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@Table(name = "users")
+@Table(name = "user")
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO, generator = "increment")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
     private Long id;
     @Column(name = "USER_NAME")
@@ -23,16 +23,8 @@ public class User {
 
 
 
-    @ManyToOne
-    @JoinColumn(name = "NATIONAL_ID")
+    @ManyToOne()
+    @JoinColumn(name="ROLE_ID")
     private Role role;
 
-
-    @Override
-
-    public String toString() {
-        return "user_id=" + id +
-                ", username='" + username + '\'' +
-                ", nationalID='" + nationalID + '\'';
-    }
 }
