@@ -1,6 +1,6 @@
-package com.management.usermangement.role;
+package com.management.usermangement.role.domain;
 
-import com.management.usermangement.permission.Permission;
+import com.management.usermangement.permission.domin.Permission;
 import jakarta.persistence.*;
 import lombok.Getter;
 

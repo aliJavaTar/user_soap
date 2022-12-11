@@ -1,4 +1,4 @@
-package com.management.usermangement.permission;
+package com.management.usermangement.permission.domin;
 
 import jakarta.persistence.*;
 import lombok.Getter;
