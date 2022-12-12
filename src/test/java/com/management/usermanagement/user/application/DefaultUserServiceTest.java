@@ -22,10 +22,10 @@ class DefaultUserServiceTest {
     void shouldSaveUser() {
         UserRepository watchRepository = mock(UserRepository.class);
 //        User user = new User("ali33");
-        User user = User.createUser(new UserName("ali33"), 1L, "12", new Role());
+        User user = User.createUser(new UserName("ali33"),  "12", new Role());
         User currentUser = userService.save(user);
         Assertions.assertThat(currentUser)
-                .isEqualTo(User.createUser(new UserName("ali33"), 1L, "12", new Role()));
+                .isEqualTo(User.createUser(new UserName("ali33"),  "12", new Role()));
         doReturn(user).when(watchRepository).findById(1L);
 
     }

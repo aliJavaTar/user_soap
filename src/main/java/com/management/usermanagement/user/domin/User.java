@@ -13,17 +13,23 @@ public class User {
     private Role role;
 
 
-
-
     private User(UserName userName, Long id, String nationalID, Role role) {
         this.userName = userName;
         this.id = id;
         this.nationalID = nationalID;
         this.role = role;
     }
+    private User(UserName userName , String nationalID, Role role) {
+        this.userName = userName;
+        this.nationalID = nationalID;
+        this.role = role;
+    }
 
     public static User createUser(UserName userName, Long id, String nationalID, Role role) {
         return new User(userName, id, nationalID, role);
+    }
+ public static User createUser(UserName userName, String nationalID, Role role) {
+        return new User(userName, nationalID, role);
     }
 
     @Override
