@@ -1,7 +1,9 @@
 package com.management.usermanagement.user.domin;
 
-public interface UserRepository {
-    User save(User user);
+import com.management.usermanagement.user.infrastructure.dto.UserDTO;
 
-    User findById(Long id);
+public interface UserRepository {
+    UserDTO save(UserDTO user);
+
+    UserDTO findById(Long id);
 }

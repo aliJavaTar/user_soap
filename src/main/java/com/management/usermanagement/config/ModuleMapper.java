@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @ComponentScan("com.management.usermanagement")
-public class Mapper {
+public class ModuleMapper {
 
     @Bean
     public ModelMapper modelMapper() {
