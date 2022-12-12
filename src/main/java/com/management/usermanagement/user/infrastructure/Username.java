@@ -11,6 +11,6 @@ import lombok.Setter;
 @AllArgsConstructor
 @Getter
 @Setter
-public class UserName {
+public class Username {
     private String username;
 }

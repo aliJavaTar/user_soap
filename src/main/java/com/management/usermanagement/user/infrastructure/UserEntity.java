@@ -1,5 +1,6 @@
 package com.management.usermanagement.user.infrastructure;
 
+import com.management.usermanagement.base.BaseEntity;
 import com.management.usermanagement.role.infrastructure.RoleEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -11,21 +12,15 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
 @Table(name = "user")
-public class UserEntity {
+public class UserEntity extends BaseEntity<Long> {
 
     private static final String ID = "ID";
     private static final String NATIONAL_ID = "NATIONAL_ID";
     private static final String ROLE_ID = "ROLE_ID";
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = ID)
-    private Long id;
-
     @Embedded
-    private UserName username;
+    private Username username;
 
     @Column(name = NATIONAL_ID)
     private String nationalID;
@@ -34,7 +29,7 @@ public class UserEntity {
     @JoinColumn(name = ROLE_ID)
     private RoleEntity role;
 
-    public UserEntity(UserName username, String nationalID, RoleEntity role) {
+    public UserEntity(Username username, String nationalID, RoleEntity role) {
         this.username = username;
         this.nationalID = nationalID;
         this.role = role;

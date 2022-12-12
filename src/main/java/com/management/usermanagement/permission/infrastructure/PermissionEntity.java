@@ -1,5 +1,6 @@
 package com.management.usermanagement.permission.infrastructure;
 
+import com.management.usermanagement.base.BaseEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -12,11 +13,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class PermissionEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "ID")
-    private Long id;
+public class PermissionEntity extends BaseEntity<Long> {
 
     @Column(name = "TITLE")
     private String title;
