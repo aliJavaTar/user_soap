@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 @RequiredArgsConstructor
-public class UserMySqlRepositoryImpl implements UserRepository {
+public class UserMySqlDAO implements UserRepository {
     private final UserMySqlRepository mySqlRepository;
 }

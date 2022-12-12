@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 @RequiredArgsConstructor
-public class RoleMySqlRepositoryImpl implements RoleRepository {
-    private final RoleMySqlRepository mySqlRepository;
+public class RoleMySqlDAO implements RoleRepository {
+    private final RoleMySqlRepository repository;
 }

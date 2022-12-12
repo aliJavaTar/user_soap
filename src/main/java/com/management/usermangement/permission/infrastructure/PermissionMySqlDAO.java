@@ -6,8 +6,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 @RequiredArgsConstructor
-public class PermissionMySqlRepositoryImpl implements PermissionRepository {
-
+public class PermissionMySqlDAO implements PermissionRepository {
     private final PermissionMySqlRepository mySqlRepository;
-
 }
