@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 // verb for name in useCase ---> like save profile   just domin
 @Service
 @RequiredArgsConstructor
-public class DefaultUserService implements UserService {
+public class DefinedUserAccessImpl implements DefinedUserAccess {
     private final UserMySqlDAO userDao;
 
     @Override
