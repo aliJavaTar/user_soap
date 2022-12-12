@@ -1,14 +1,11 @@
 package com.management.usermanagement.user.domin;
 
-public class UserName {
-    private final String username;
-    private final UserValidation userValidation;
-
-    public UserName(String username) {
-        userValidation = new UserValidation(username);
+public record UserName(String username) {
+    public UserName {
+        UserValidation userValidation = new UserValidation(username);
         if (userValidation.getUsernameValid().isBlank())
             throw new RuntimeException("user name Not valid");
-        this.username = username;
+        username= userValidation.username();
     }
 
     public String getUsername() {

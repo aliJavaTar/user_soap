@@ -1,20 +1,12 @@
 package com.management.usermanagement.permission.domin;
 
-import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+public record Permission(Long id, String title) {
 
-@Entity
-@Table(name = "PERMISSION")
-@Getter
-@Setter
-public class Permission {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    public Long getId() {
+        return id;
+    }
 
-    @Column(name = "ID")
-    private Long id;
-    @Column(name = "TITLE")
-    private String title;
-
+    public String getTitle() {
+        return title;
+    }
 }

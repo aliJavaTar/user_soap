@@ -11,6 +11,6 @@ import lombok.Setter;
 @AllArgsConstructor
 @Getter
 @Setter
-public class UserValidation {
-    private String usernameValid;
+public class UserName {
+    private String username;
 }

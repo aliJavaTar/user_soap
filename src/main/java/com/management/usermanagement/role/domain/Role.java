@@ -11,7 +11,6 @@ public class Role {
 
     private String roleTitle;
 
-
     private Set<Permission> permissions;
 
 

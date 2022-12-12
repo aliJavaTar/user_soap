@@ -1,6 +1,6 @@
 package com.management.usermanagement.user.infrastructure;
 
-import com.management.usermanagement.role.domain.Role;
+import com.management.usermanagement.role.infrastructure.RoleEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -15,22 +15,27 @@ import lombok.Setter;
 @Table(name = "user")
 public class UserEntity {
 
+    private static final String ID = "ID";
+    private static final String NATIONAL_ID = "NATIONAL_ID";
+    private static final String ROLE_ID = "ROLE_ID";
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "ID")
+    @Column(name = ID)
     private Long id;
 
     @Embedded
-    private UserValidation userValidation;
+    private UserName username;
 
-    @Column(name = "NATIONAL_ID")
+    @Column(name = NATIONAL_ID)
     private String nationalID;
-    @ManyToOne()
-    @JoinColumn(name = "ROLE_ID")
-    private Role role;
 
-    public UserEntity(UserValidation userValidation, String nationalID, Role role) {
-        this.userValidation = userValidation;
+    @ManyToOne()
+    @JoinColumn(name = ROLE_ID)
+    private RoleEntity role;
+
+    public UserEntity(UserName username, String nationalID, RoleEntity role) {
+        this.username = username;
         this.nationalID = nationalID;
         this.role = role;
     }
