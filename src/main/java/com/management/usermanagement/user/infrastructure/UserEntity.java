@@ -1,9 +1,8 @@
 package com.management.usermanagement.user.infrastructure;
 
-import com.management.usermanagement.base.BaseEntity;
+import com.management.usermanagement.base.infra.BaseEntity;
 import com.management.usermanagement.role.infrastructure.RoleEntity;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

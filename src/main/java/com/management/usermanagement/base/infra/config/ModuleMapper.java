@@ -1,4 +1,4 @@
-package com.management.usermanagement.config;
+package com.management.usermanagement.base.infra.config;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;

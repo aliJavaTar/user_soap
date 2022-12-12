@@ -1,9 +1,7 @@
-package com.management.usermanagement.user.infrastructure.dto;
+package com.management.usermanagement.base.infra.config;
 
-import com.management.usermanagement.base.BaseEntity;
-import com.management.usermanagement.config.BaseDTO;
-import com.management.usermanagement.config.ModuleMapper;
-import com.management.usermanagement.user.infrastructure.UserEntity;
+import com.management.usermanagement.base.infra.BaseEntity;
+import com.management.usermanagement.base.infra.dto.BaseDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 

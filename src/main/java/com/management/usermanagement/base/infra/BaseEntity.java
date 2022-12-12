@@ -1,4 +1,4 @@
-package com.management.usermanagement.base;
+package com.management.usermanagement.base.infra;
 
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;

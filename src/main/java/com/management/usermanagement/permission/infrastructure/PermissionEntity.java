@@ -1,6 +1,6 @@
 package com.management.usermanagement.permission.infrastructure;
 
-import com.management.usermanagement.base.BaseEntity;
+import com.management.usermanagement.base.infra.BaseEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

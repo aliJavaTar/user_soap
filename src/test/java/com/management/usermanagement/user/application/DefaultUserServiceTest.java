@@ -2,7 +2,7 @@ package com.management.usermanagement.user.application;
 
 import com.management.usermanagement.role.domain.Role;
 import com.management.usermanagement.user.domin.UserRepository;
-import com.management.usermanagement.user.infrastructure.dto.UserDTO;
+import com.management.usermanagement.user.infrastructure.UserDTO;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,6 +1,6 @@
 package com.management.usermanagement.user.domin;
 
-import com.management.usermanagement.user.infrastructure.dto.UserDTO;
+import com.management.usermanagement.user.infrastructure.UserDTO;
 
 public interface UserRepository {
     UserDTO save(UserDTO user);

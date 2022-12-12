@@ -1,7 +1,6 @@
 package com.management.usermanagement.role.infrastructure;
 
-import com.management.usermanagement.base.BaseEntity;
-import com.management.usermanagement.permission.domin.Permission;
+import com.management.usermanagement.base.infra.BaseEntity;
 import com.management.usermanagement.permission.infrastructure.PermissionEntity;
 import jakarta.persistence.*;
 import lombok.Getter;

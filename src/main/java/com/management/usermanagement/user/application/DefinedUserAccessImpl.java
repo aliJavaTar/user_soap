@@ -1,7 +1,7 @@
 package com.management.usermanagement.user.application;
 
 import com.management.usermanagement.user.infrastructure.UserMySqlDAO;
-import com.management.usermanagement.user.infrastructure.dto.UserDTO;
+import com.management.usermanagement.user.infrastructure.UserDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

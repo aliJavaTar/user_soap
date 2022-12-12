@@ -1,6 +1,6 @@
-package com.management.usermanagement.user.infrastructure.dto;
+package com.management.usermanagement.user.infrastructure;
 
-import com.management.usermanagement.config.BaseDTO;
+import com.management.usermanagement.base.infra.dto.BaseDTO;
 import com.management.usermanagement.role.domain.Role;
 import lombok.AllArgsConstructor;
 import lombok.Data;

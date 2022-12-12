@@ -1,4 +1,4 @@
-package com.management.usermanagement.config;
+package com.management.usermanagement.base.infra.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
