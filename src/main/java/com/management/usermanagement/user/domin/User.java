@@ -4,35 +4,34 @@ import com.management.usermanagement.role.domain.Role;
 
 import java.util.Objects;
 
-
 public class User {
     private Long id;
-    private final UserName userName;
+    private final Username userName;
     private final String nationalID;
     private final Role role;
 
-    private User(UserName userName, Long id, String nationalID, Role role) {
+    private User(Username userName, Long id, String nationalID, Role role) {
         this.userName = userName;
         this.id = id;
         this.nationalID = nationalID;
         this.role = role;
     }
 
-    private User(UserName userName, String nationalID, Role role) {
+    private User(Username userName, String nationalID, Role role) {
         this.userName = userName;
         this.nationalID = nationalID;
         this.role = role;
     }
 
-    public static User createUser(UserName userName, Long id, String nationalID, Role role) {
+    public static User createUser(Username userName, Long id, String nationalID, Role role) {
         return new User(userName, id, nationalID, role);
     }
 
-    public static User createUser(UserName userName, String nationalID, Role role) {
+    public static User createUser(Username userName, String nationalID, Role role) {
         return new User(userName, nationalID, role);
     }
 
-    public UserName getUserName() {
+    public Username getUserName() {
         return userName;
     }
 

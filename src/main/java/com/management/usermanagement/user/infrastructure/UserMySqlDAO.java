@@ -5,7 +5,7 @@ import com.management.usermanagement.user.domin.User;
 import com.management.usermanagement.user.domin.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
-
+// to entity  ---> to dto
 @Repository
 @RequiredArgsConstructor
 public class UserMySqlDAO implements UserRepository {

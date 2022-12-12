@@ -2,7 +2,7 @@ package com.management.usermanagement.user.application;
 
 import com.management.usermanagement.role.domain.Role;
 import com.management.usermanagement.user.domin.User;
-import com.management.usermanagement.user.domin.UserName;
+import com.management.usermanagement.user.domin.Username;
 import com.management.usermanagement.user.domin.UserRepository;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -22,10 +22,10 @@ class DefaultUserServiceTest {
     void shouldSaveUser() {
         UserRepository watchRepository = mock(UserRepository.class);
 //        User user = new User("ali33");
-        User user = User.createUser(new UserName("ali33"),  "12", new Role());
+        User user = User.createUser(new Username("ali33"),  "12", new Role());
         User currentUser = userService.save(user);
         Assertions.assertThat(currentUser)
-                .isEqualTo(User.createUser(new UserName("ali33"),  "12", new Role()));
+                .isEqualTo(User.createUser(new Username("ali33"),  "12", new Role()));
         doReturn(user).when(watchRepository).findById(1L);
 
     }
