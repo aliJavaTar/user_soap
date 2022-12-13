@@ -1,9 +1,8 @@
 package com.management.usermanagement.user.infrastructure;
 
-import com.management.usermanagement.user.domin.UserRepository;
 import com.management.usermanagement.base.infra.config.Mapper;
+import com.management.usermanagement.user.domin.UserRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 // to entity  ---> to dto
@@ -11,8 +10,7 @@ import org.springframework.stereotype.Repository;
 @RequiredArgsConstructor
 public class UserMySqlDAO implements UserRepository {
     private final UserMySqlRepository mySqlRepository;
-    @Autowired
-    private Mapper<UserEntity, UserDTO> mapper;
+    private final Mapper<UserEntity, UserDTO> mapper;
 
     @Override
     public UserDTO save(UserDTO user) {
