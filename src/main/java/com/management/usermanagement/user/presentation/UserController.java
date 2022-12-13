@@ -9,14 +9,14 @@ import jakarta.jws.WebResult;
 import jakarta.jws.WebService;
 import jakarta.xml.ws.BindingType;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
 
 @WebService(name = "UserController", targetNamespace = "http://tempuri.org/")
 @BindingType(value = javax.xml.ws.soap.SOAPBinding.SOAP11HTTP_BINDING)
 @RequiredArgsConstructor
-@Component
+@Controller
 public class UserController {
-    private static final String HTTP_INFO_LIST = "http://tempuri.org/setVakhVisaInfoList";
+    private static final String HTTP_INFO_LIST = "http://tempuri.org/addUser";
     private static final String HTTP_ORG = "http://tempuri.org/";
     private final DefinedUserAccess userAccess;
 
