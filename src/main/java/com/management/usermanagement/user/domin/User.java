@@ -1,42 +1,45 @@
 package com.management.usermanagement.user.domin;
 
 import com.management.usermanagement.role.domain.Role;
+import com.management.usermanagement.user.infrastructure.dto.request.UserRequest;
 
 import java.util.Objects;
+import java.util.Optional;
 
 public class User {
-    private Long id;
-    private  Username userName;
     private final String nationalID;
     private final Role role;
+    private Long id;
+    private Username username;
 
     private User(Username userName, Long id, String nationalID, Role role) {
-        this.userName = userName;
+        this.username = userName;
         this.id = id;
         this.nationalID = nationalID;
         this.role = role;
     }
 
-    private User(Username userName, String nationalID, Role role) {
-        this.userName = userName;
+    private User(Username username, String nationalID, Role role) {
+        this.username = username;
         this.nationalID = nationalID;
         this.role = role;
     }
 
-    public static User createUser(Username userName, Long id, String nationalID, Role role) {
-        return new User(userName, id, nationalID, role);
+    public static User createUser(Username username, Long id, String nationalID, Role role) {
+        return new User(username, id, nationalID, role);
     }
 
-    public static User createUser(Username userName, String nationalID, Role role) {
-        return new User(userName, nationalID, role);
+    public static Optional<User> createUser(UserRequest request) {
+        Username isValidUsername = new Username(request.getUsername().getUsername());
+        return Optional.of(new User(isValidUsername, request.getNationalID(), request.getRole()));
     }
 
-    public void setUserName(Username userName) {
-        this.userName = userName;
+    public Username getUsername() {
+        return username;
     }
 
-    public Username getUserName() {
-        return userName;
+    public void setUsername(Username username) {
+        this.username = username;
     }
 
     public Long getId() {
@@ -56,7 +59,7 @@ public class User {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return Objects.equals(userName, user.userName) &&
+        return Objects.equals(username, user.username) &&
                 Objects.equals(id, user.id) &&
                 Objects.equals(nationalID, user.nationalID) &&
                 Objects.equals(role, user.role);
@@ -64,6 +67,6 @@ public class User {
 
     @Override
     public int hashCode() {
-        return Objects.hash(userName, id, nationalID, role);
+        return Objects.hash(username, id, nationalID, role);
     }
 }
