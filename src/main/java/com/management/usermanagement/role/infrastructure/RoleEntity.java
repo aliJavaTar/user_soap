@@ -4,11 +4,13 @@ import com.management.usermanagement.base.infra.BaseEntity;
 import com.management.usermanagement.permission.infrastructure.PermissionEntity;
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.Setter;
 
 import java.util.Set;
 
 @Entity
 @Getter
+@Setter
 @Table(name = "ROLES")
 public class RoleEntity extends BaseEntity<Long> {
 

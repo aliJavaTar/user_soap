@@ -1,7 +1,8 @@
 package com.management.usermanagement.user.application;
 
-import com.management.usermanagement.user.infrastructure.UserDTO;
+import com.management.usermanagement.user.infrastructure.dto.request.UserRequest;
+import com.management.usermanagement.user.infrastructure.dto.respons.UserResponse;
 
 public interface DefinedUserAccess {
-    UserDTO save(UserDTO user);
+    UserResponse save(UserRequest user);
 }

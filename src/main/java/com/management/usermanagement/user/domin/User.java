@@ -6,7 +6,7 @@ import java.util.Objects;
 
 public class User {
     private Long id;
-    private final Username userName;
+    private  Username userName;
     private final String nationalID;
     private final Role role;
 
@@ -29,6 +29,10 @@ public class User {
 
     public static User createUser(Username userName, String nationalID, Role role) {
         return new User(userName, nationalID, role);
+    }
+
+    public void setUserName(Username userName) {
+        this.userName = userName;
     }
 
     public Username getUserName() {
